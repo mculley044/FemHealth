@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FemHealth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+
+    <!-- Import our custom styles-->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+
+    <!-- Link bootstrap--don't worry about this-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<!--
+    Hold up!
+
+    Make sure PLEASE make sure you read the following documentation: https://getbootstrap.com/docs/4.6/layout/grid/
+
+    You are going to see a lot things like: class="row", class="col"
+    This is following the bootstrap grid layout which makes placing things in your web page so much
+    smoother. You won't have to worry about nitty gritty CSS styling. So please read that documentation
+    and keep it handy for when you don't know something.
+
+    Oh! And you'll also be seeing a lot class="jumbotron": https://getbootstrap.com/docs/4.6/components/jumbotron/
+
+    This documentation stuff is crucial to have handy when you're trying to learn something, or even
+    figure out what is breaking your called (debugging step is what this is called)
+-->
+
+<!--
+  Body: Start developing the meat of our website
+  Through out the many other .html files, you're going to notice lots of repeated
+  code or similar code--which is normal!
+
+  There exist modern frameworks like React.JS and Vue.JS that help you with these kinds
+  of things, so if you're interested, check them out!!
+  -->
+
+
+<body>
+    <!-- Navigation bar found at the top of the every page...note please make sure your "href" link is accurate
+     if you ever attempt to modify this section, otherwise your page may never load because the browser
+     won't know where to look! -->
+    <nav class="navbar navbar-xs navbar-expand-lg fixed-top navbar-light">
+        <!-- class="......" is bootstrap stuff to make our life easy,
+        look at the bootstrap documentation link I've provided you
+        -->
+        <div class="d-md-flex d-block flex-row mx-md-auto mx-0">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <!-- <ul> creates an un ordered list of "stuff" being the text with links to other pages-->
+                    <li class="nav-item">
+                        <!--<li> creates a list item for our unordered list-->
+                        <!-- Use inline style stuff for things that are simple...its cool to put them
+                                 in the styles.css but to just show you that its possible I'll do it here-->
+                        <a class="nav-link" href="index.html" style="color:white;">Home</a>
+                        <!-- here is the actual content in the list-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./views/About.html" style="color:white;">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./views/Services.html" style="color:white;">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./views/Locations.html" style="color:white;">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./views/Frequently-Asked-Questions.html" style="color:white;">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./views/Testimonials.html" style="color:white;">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./views/Contact.html" style="color:white;">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Header of the home page with the image--see styles.css for "id" references
+        that contain the styles for each tag-->
+    <header class="masthead bg-primary text-white text-center">
+        <div class="jumbotron" id="home-header-image">
+            <div id="home-header-text-container">
+                <h1 class="display-1" id="home-header-text">FemHealth<br>For Women. By Women.</h1>
+                <!-- Not in use: <p class="lead" id="home-header-lead-text"></p> -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Divs allow us to wrap large or small chunks of code and style them all at once, in this case I am wraping
+         all the elements in the div and applying styles to them all at once. I am doing this because it makes formatting
+         smoother, more controlled, and also easier to group elements-->
+    <div id="container-all-jumbotrons">
+        <div class="row">
+            <div class="col-sm">
+                <!--Use col to evenly space out any elements in this row -->
+                <div class="jumbotron" style="background-color:#995982;">
+                    <h1 class="display-4" style="text-align:center;color:white;font-weight: bold;">Our Vision and Mission</h1>
+                    <p style="text-align:left;color:white;text-align: center; font-size: larger;">Our vision is to transform the future of healthcare for women through accessible care. Our mission is to provide comfort, compassion, and inclusivity within our community. Our providers treat with the highest quality of individualized care in their respective specialty to optimize our patients’ level of function. We aim to provide women with accessible care regardless of their financial circumstance.
+                        .</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="jumbotron" style="background-color:#e2a3b7; color:white">
+                    <h1 class="display-4" style="text-align:center;font-weight: bold;">What our Patients Say</h1>
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">"You and your staff have once again performed a miracle on my body! The
+                            professionalism and attention to patient care exhibited by your staff is once again
+                            remarkable, and far surpasses any expectation I have. My lymphedema has improved significantly and I can now manage it at home. Thank you FemHealth!"</p>
+                        <footer class="blockquote-footer" style="color:white"> Diane C <cite
+                                title="Source Title"> Breast Cancer Survivor</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="jumbotron" style="background-color:#26282b; color:white">
+                    <h1 class="display-4" style="text-align:center;font-weight: bold;">Location: Central Harlem</h1>
+                        <div >
+                            <!-- What if we want to make the images clickable? Add an anchor tag <a href="path"> <img> </a> -->
+                            <img src="./assets/images/Harlem.jpg" style="text-align:center;"alt="carmel" width="100%" height="100%"
+                                style="">
+                        </div>
+
+                    </div>
+        </div>
+    </div>
+
+    <!-- Copyright stuff and helpful easy access links-->
+    <footer class="page-footer font-small white pt-4" style="background-color:#26282b; color:white">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <!-- format the columns-->
+                    <h5 class="text-uppercase">FemHealth</h5>
+                    <p>Thank you for visiting!</p>
+                </div>
+                <div class="col">
+                    <h5>INSURANCE</h5>
+                    <ul class="list-unstyled">
+                        <!--Just have each item float under each other with no bullet points-->
+                        <li>
+                            <a href="https://www.medicare.gov/">Medicare</a>
+                        </li>
+                        <li>
+                            <a href="https://www.medicaid.gov/">Medicaid</a>
+                        </li>
+                        <li>
+                            <a href="https://info.nystateofhealth.ny.gov/EssentialPlan">Essential Plan</a>
+                        </li>
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h5>LOCATIONS</h5>
+                    <ul class="list-unstyled">
+                        <!--Just have each item float under each other with no bullet points-->
+                        <li>
+                            <a href="https://www.google.com/https://www.nycgo.com/boroughs-neighborhoods/manhattan/harlem/">Harlem</a>
+                        </li>
+                    
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3" style="color:white;">© 2023 Copyright:
+            <a style="color:white;" href="https://marist.edu/"> Marist.edu</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
